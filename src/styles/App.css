@@ -1,0 +1,365 @@
+@keyframes selecting {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(0deg) rotateY(360deg);
+  }
+
+  100% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@font-face {
+  font-family: "neuro";
+  src: url("./neuropoliticalrg.otf");
+}
+@font-face {
+  font-family: "stationLight";
+  src: url("./Sansation_Light.ttf");
+}
+@font-face {
+  font-family: "stationRegular";
+  src: url("./Sansation_Regular.ttf");
+}
+@font-face {
+  font-family: "stationBold";
+  src: url("./Sansation_Bold.ttf");
+}
+
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.title{
+  font-family: "neuro";
+  margin-top: 0;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.dataContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonListContent{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.imageCard{
+  cursor: pointer;
+}
+
+.imageCard:hover{
+  animation: selecting 7s infinite ease-in-out;
+}
+.borderImage{
+  background-color: #FFECDC;
+  border-radius: 10px;
+}
+.borderImage:hover{
+  border: solid 2px black;
+}
+
+.cardgrass{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(134, 173, 90);
+  background: linear-gradient(180deg, rgb(134,173,90) 0%, rgba(255,255,255,1) 70%);
+}
+.typegrass{
+  border: solid thin rgb(134, 173, 90);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardfire{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(255, 136, 136);
+  background: linear-gradient(180deg, rgb(255,136,136) 0%, rgba(255,255,255,1) 70%);
+}
+.typefire{
+  border: solid thin rgb(255, 136, 136);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardwater{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(85, 140, 172);
+  background: linear-gradient(180deg, rgba(85,140,172,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typewater{
+  border: solid thin rgb(85, 140, 172);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardbug{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(51, 133, 43);
+  background: linear-gradient(180deg, rgba(51,133,43,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typebug{
+  border: solid thin rgb(51, 133, 43);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardnormal{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(204, 157, 70);
+  background: linear-gradient(180deg, rgba(204,157,70,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typenormal{
+  border: solid thin rgb(204, 157, 70);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardpoison{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(166, 7, 206);
+  background: linear-gradient(180deg, rgba(166,7,206,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typepoison{
+  border: solid thin rgb(166, 7, 206);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardelectric{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(197, 187, 44);
+  background: linear-gradient(180deg, rgba(197,187,44,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typeelectric{
+  border: solid thin rgb(197, 183, 44);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardground{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(97, 35, 16);
+  background: linear-gradient(180deg, rgba(97,35,16,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typeground{
+  border: solid thin rgb(97, 35, 16);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardfairy{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(42, 212, 235);
+  background: linear-gradient(180deg, rgba(42,212,235,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typefairy{
+  border: solid thin rgb(42, 212, 235);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardfighting{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(146, 146, 146);
+  background: linear-gradient(180deg, rgba(146, 146, 146,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typefighting{
+  border: solid thin rgb(146, 146, 146);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardpsychic{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(143, 88, 245);
+  background: linear-gradient(180deg, rgba(143,88,245,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typepsychic{
+  border: solid thin rgb(143, 88, 245);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardrock{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(65, 65, 65);
+  background: linear-gradient(180deg, rgba(65,65,65,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typerock{
+  border: solid thin rgb(65, 65, 65);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardghost{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(99, 48, 156);
+  background: linear-gradient(180deg, rgba(99,48,156,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typeghost{
+  border: solid thin rgb(99, 48, 156);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.cardice{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(148, 203, 212);
+  background: linear-gradient(180deg, rgba(148,203,212,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typeice{
+  border: solid thin rgb(148, 203, 212);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.carddragon{
+  padding: 2vh;
+  margin: 1vh;
+  width: 12vw;
+  border: solid 2px;
+  border-color: rgb(227, 230, 51);
+  background: linear-gradient(180deg, rgba(227,230,51,1) 0%, rgba(255,255,255,1) 70%);
+}
+.typedragon{
+  border: solid thin rgb(227, 230, 51);
+  width: fit-content;
+  padding: 0 1vw;
+  margin-bottom: 1vh !important;
+  font-family: "stationBold" !important;
+}
+
+.pokeName{
+  font-family: "stationBold" !important;
+}
+
+.backBtn{
+  background-color: black;
+  color: white;
+  font-family: "stationBold";
+  font-size: 25px;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+}
