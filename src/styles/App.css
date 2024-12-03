@@ -28,6 +28,10 @@
   font-family: "stationBold";
   src: url("./Sansation_Bold.ttf");
 }
+@font-face {
+  font-family: "majorMono";
+  src: url("../fonts/MajorMonoDisplay-Regular.ttf");
+}
 
 body{
   background-color: rgb(224, 99, 99);
@@ -76,6 +80,27 @@ body{
 .title{
   font-family: "neuro";
   margin-top: 3vh;
+  margin-bottom: 0;
+}
+
+.inputSearch{
+  margin: 1vh 4vh;
+  font-size: 3vh;
+  width: 25vw;
+  border-color: rgb(224, 99, 99);
+  border-radius: 15px;
+  padding-left: 1vw;
+  font-family: "stationRegular";
+}
+
+.selectType{
+  margin: 1vh 4vh;
+  font-size: 3vh;
+  width: 15vw;
+  border-color: rgb(224, 99, 99);
+  border-radius: 15px;
+  padding-left: 1vw;
+  font-family: "stationRegular";
 }
 
 .card {
@@ -367,4 +392,16 @@ body{
   position: absolute;
   top: 10vh;
   left: 10vw;
+}
+
+.backPortfolio{
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  font-family: "majorMono";
+  background-color: black;
+  color: white;
+}
+.backPortfolio:hover{
+  border: none;
 }

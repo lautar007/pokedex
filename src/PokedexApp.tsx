@@ -5,6 +5,7 @@ import { getPokemonList } from "./services/pokemonListService";
 import { getPokemon } from "./services/pokemonService";
 import "./styles/App.css";
 import PokeDetail from "./components/pokeDetail";
+import { Link } from "react-router-dom";
 
 
 function PokedexApp() {
@@ -25,7 +26,6 @@ function PokedexApp() {
           return pokemon;
         })
       );
-      console.table(pokemonCompleteList)
         setPokemonList(pokemonCompleteList)
         setSearchedState(pokemonCompleteList)
     };
@@ -67,13 +67,18 @@ function handleFilter(event:any){
   return (
     <>
       <h1 className="title">Pokedex App</h1>
+      <Link to="http://lautaronunezportfolio.vercel.app/">
+        <button className="backPortfolio">Portfolio.</button>
+      </Link>
+
       {!showDetail? 
         <div>
           <input
+          className="inputSearch"
           placeholder="Search a Pokemon"
           onChange={handleSearch}
           />
-          <select onChange={handleFilter}>
+          <select className="selectType" onChange={handleFilter}>
             <option>All types</option>
             {types.map(type =>{
               return (
